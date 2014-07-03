@@ -18,7 +18,7 @@ __saq('bind-click-events');
 __saq('show-modal', 'share-post-purchase-modal');
 ```
 
-This simply adds your functions to the queue. It does so by making sure that the __saq (**S**ojo **A**ction **Q**ueue) object exists, and if it doesn't, it creates it. The following calls push your command (the first argument, as a string) and arguments to your command (the following values) to the queue which will be evaluated in order once Jazz has been loaded.
+This simply adds your functions to the queue. It does so by making sure that the __saq (Sojo Action Queue) object exists, and if it doesn't, it creates it. The following calls push your command (the first argument, as a string) and arguments to your command (the following values) to the queue which will be evaluated in order once Jazz has been loaded.
 
 ## Programming
 Using jazz within your own javascript projects is even easier. For the following example, we'll assume that jQuery is being used to easily load scripts asyc, but `$.getScript()` does exactly what you think. Feel free to replace this with any script loader, or remove it entirely and put a `<script></script>` node with the correct `src` attribute anywhere in your dom tree.
