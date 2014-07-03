@@ -1,4 +1,3 @@
-
 /**
  * Run ./build.py after you change this file to make a minified version of it,
  * but be sure to test it afterwards.
