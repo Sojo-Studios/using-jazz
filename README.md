@@ -10,7 +10,7 @@ Embedding jazz on your website is easy! Simply put the following at the bottom o
 
 (Note that the portal will automagically generate this snippet for you when you create your campaign.)
 
-Once you've done this, you can queue commands for jazz to execute once the library has loaded by calling the following javascript:
+Once you've done this, you can queue commands for jazz to execute once the library has loaded by calling the following JavaScript anywhere you like:
 
 ```js
 __saq = __saq || function() { (__saq.q = __saq.q || []).push(arguments); };
@@ -29,13 +29,19 @@ Initializes the sojo global object with the campaign ID passed as the first stri
 #### bind-click-events
 Parameters: [`string`]
 
-Searches the `<body>` for elements that have the `data-sojo-command` attribute and binds the action specified as the value of that attribute to their click event. Convenient for buttons that trigger modals.
+Searches the `<body>` for elements that have the `data-sojo-command` HTML5 data attribute and binds the action specified as the value of that attribute to their click event. The value of the attribute can be any of these commands (except function) with the parameters delimited by the ':' character. Convenient for buttons that trigger modals.
+
+The optional string parameter is a jQuery 1.9-valid css selector that only does the search for the tag attribute inside results for that selector. This is provided because searching the entire body could potentially be a time-intensive operation if the page is very complex or if the computer is slow and the browser is old.
 
 #### show-modal
-Parameters: `string`
+Parameters: [`string`]
+
+Shows the modal named by the string parameter. If not provided, it defaults to `share-modal`.
 
 #### set-campaign-id
 Parameters: `string`
+
+Sets the current Campaign ID to the provided string.
 
 #### function
 Parameters: `function`
